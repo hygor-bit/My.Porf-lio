@@ -1,0 +1,8 @@
+/* ============================================================
+   Gonzaga Code — Webfonts
+   Loaded from Google Fonts CDN. To self-host, replace the @import
+   with @font-face rules pointing at local .woff2 files.
+   Display: Space Grotesk · Body/UI: Manrope · Code: JetBrains Mono
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
