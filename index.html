@@ -106,8 +106,20 @@
   <!-- ===== HERO ===== -->
   <header id="top" style="position:relative;z-index:1;min-height:100vh;display:grid;grid-template-columns:0.92fr 1.18fr;align-items:center;gap:16px;padding:130px clamp(20px,5vw,64px) 50px;max-width:1480px;margin:0 auto;">
     <div style="animation:hg-introText 1.2s cubic-bezier(.22,1,.36,1) 2.6s both;position:relative;top:-52px;">
-      <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid rgba(34,211,238,0.3);background:rgba(34,211,238,0.06);font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.14em;color:#5eead4;margin-bottom:28px;">
-        <span style="width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;"></span><span data-i18n="AVAILABLE FOR WORK · 2026">AVAILABLE FOR WORK · 2026</span>
+      <!-- foto de perfil -->
+      <div style="margin-bottom:32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+        <div style="position:relative;flex:none;">
+          <!-- anel de brilho externo -->
+          <div style="position:absolute;inset:-5px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#22d3ee,#ec4899);opacity:0.35;filter:blur(10px);"></div>
+          <!-- moldura gradiente -->
+          <div style="position:relative;width:112px;height:112px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#a855f7,#22d3ee,#ec4899);box-shadow:0 0 40px -8px rgba(168,85,247,0.9),0 0 80px -20px rgba(34,211,238,0.5);">
+            <img src="./minha-imagem.jpeg" alt="Hygor Gonzaga" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center top;display:block;border:2.5px solid #000005;image-rendering:high-quality;" />
+          </div>
+          <span style="position:absolute;bottom:5px;right:5px;width:16px;height:16px;border-radius:50%;background:#22c55e;border:2.5px solid #000005;box-shadow:0 0 10px #22c55e;"></span>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid rgba(34,211,238,0.3);background:rgba(34,211,238,0.06);font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.14em;color:#5eead4;">
+          <span data-i18n="AVAILABLE FOR WORK · 2026">AVAILABLE FOR WORK · 2026</span>
+        </div>
       </div>
       <p style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.32em;color:rgba(244,244,246,0.5);margin:0 0 18px;" data-i18n="FULL STACK DEVELOPER">FULL STACK DEVELOPER</p>
       <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,5.6vw,82px);line-height:1.02;letter-spacing:-0.03em;margin:0;text-wrap:balance;">
