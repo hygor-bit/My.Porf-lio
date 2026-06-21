@@ -1,5 +1,7 @@
 /* @ds-bundle: {"format":3,"namespace":"GonzagaCodeDesignSystem_13169e","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Button","sourcePath":"components/buttons/Button.jsx"},{"name":"IconButton","sourcePath":"components/buttons/IconButton.jsx"},{"name":"Badge","sourcePath":"components/display/Badge.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"Stat","sourcePath":"components/display/Stat.jsx"},{"name":"Tag","sourcePath":"components/display/Tag.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"Navbar","sourcePath":"components/navigation/Navbar.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"5ed88969caa2","components/buttons/Button.jsx":"341265a07705","components/buttons/IconButton.jsx":"e5f947bb11ab","components/display/Badge.jsx":"c20fbe8cf924","components/display/Card.jsx":"4ac7975b1264","components/display/Stat.jsx":"970c45b6a999","components/display/Tag.jsx":"076a88466d94","components/forms/Checkbox.jsx":"8c7610eb7ae5","components/forms/Field.jsx":"b78b5e8d367e","components/forms/Input.jsx":"2cbb52f356df","components/forms/Select.jsx":"f603d946ffad","components/navigation/Footer.jsx":"917e0c078b3c","components/navigation/Navbar.jsx":"de308fbca58a","ui_kits/_shared/kit.jsx":"d296a8c79073","ui_kits/dashboard/Dashboard.jsx":"dfba50701b90","ui_kits/dashboard/Overview.jsx":"d5a96f053bb1","ui_kits/landing-page/Landing.jsx":"462d5fe3f654","ui_kits/marketing-site/Hero.jsx":"8533cd1e867c","ui_kits/marketing-site/Portfolio.jsx":"de4498f996f3","ui_kits/marketing-site/Process.jsx":"347848e430aa","ui_kits/marketing-site/Services.jsx":"9742f7967466"},"inlinedExternals":[],"unexposedExports":[]} */
 
+const { a } = require("framer-motion/client");
+
 (() => {
 
 const __ds_ns = (window.GonzagaCodeDesignSystem_13169e = window.GonzagaCodeDesignSystem_13169e || {});
@@ -807,8 +809,11 @@ function Footer({
   }, "\xA9 ", new Date().getFullYear(), " Gonzaga Code \u2014 CNPJ 00.000.000/0001-00"), /*#__PURE__*/React.createElement("div", {
     className: "gc-footer__social"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#",
+    href: "https://www.instagram.com/gonzaga.code?igsh=eGNrZms2d2ZvaXU%3D&utm_source=qr",
+    target: "_blank",
+    rel: "noopener noreferrer",
     "aria-label": "Instagram"
+    
   }, /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 24 24",
     fill: "none",

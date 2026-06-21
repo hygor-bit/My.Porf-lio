@@ -303,7 +303,7 @@
             </div>
             <div style="display:flex;gap:12px;margin-top:6px;">
               <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
-                <a href="#" style="display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:rgba(244,244,246,0.7);transition:all .2s;" style-hover="border-color:rgba(168,85,247,0.6);color:#fff;background:rgba(168,85,247,0.12);">{{ s }}</a>
+                <a href="{{ s.href }}" target="_blank" rel="noopener" style="display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:rgba(244,244,246,0.7);transition:all .2s;" style-hover="border-color:rgba(168,85,247,0.6);color:#fff;background:rgba(168,85,247,0.12);">{{ s.label }}</a>
               </sc-for>
             </div>
           </div>
@@ -320,7 +320,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer style="position:relative;z-index:1;border-top:1px solid rgba(255,255,255,0.07);padding:clamp(48px,7vw,90px) clamp(20px,5vw,64px) 40px;text-align:center;overflow:hidden;">
-    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(48px,14vw,200px);line-height:0.92;letter-spacing:-0.04em;margin:0;-webkit-text-stroke:1.5px rgba(168,85,247,0.45);color:transparent;white-space:nowrap;background:linear-gradient(180deg,rgba(168,85,247,0.12),transparent);-webkit-background-clip:text;background-clip:text;">HYGOR GONZAGA</h2>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(48px,14vw,200px);line-height:0.92;letter-spacing:-0.04em;margin:0;-webkit-text-stroke:1.5px rgba(168,85,247,0.45);color:transparent;white-space:nowrap;background:linear-gradient(180deg,rgba(168,85,247,0.12),transparent);-webkit-background-clip:text;background-clip:text;">GONZAGA DEV</h2>
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px;margin-top:36px;">
       <a href="https://wa.me/5511982627309?text=Ol%C3%A1%20Hygor!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:13px;font-weight:700;font-size:14.5px;color:#fff;background:linear-gradient(135deg,#25D366,#128C7E);box-shadow:0 0 30px -8px rgba(37,211,102,0.8);transition:transform .2s;" style-hover="transform:translateY(-2px);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.476-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
@@ -328,7 +328,7 @@
       </a>
       <div style="display:flex;gap:10px;">
         <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
-          <a href="#" style="display:grid;place-items:center;width:42px;height:42px;border-radius:11px;border:1px solid rgba(255,255,255,0.12);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:rgba(244,244,246,0.7);transition:all .2s;" style-hover="border-color:rgba(34,211,238,0.6);color:#fff;">{{ s }}</a>
+          <a href="{{ s.href }}" target="_blank" rel="noopener" style="display:grid;place-items:center;width:42px;height:42px;border-radius:11px;border:1px solid rgba(255,255,255,0.12);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:rgba(244,244,246,0.7);transition:all .2s;" style-hover="border-color:rgba(34,211,238,0.6);color:#fff;">{{ s.label }}</a>
         </sc-for>
       </div>
     </div>
@@ -364,9 +364,9 @@ class Component extends DCLogic {
         { name: "Crypto Portfolio Tracker", year: "2023", desc: "Live WebSocket pricing for 5k+ assets in an installable offline-first PWA.", tags: ["Python","FastAPI","React","WebSocket"] },
       ],
       experiences: [
-        { idx: 0, company: "FREELANCE", role: "Full Stack Developer & Consultant", period: "2023 — PRESENT", summary: "Designing and shipping high-conversion products end to end for clients across fintech and SaaS.", achievements: ["Delivered 20+ websites averaging 0.9s LCP and +40% client conversion.","Owned the full stack — design, frontend, API, infra and deploy.","Introduced A/B testing on CTAs, lifting lead capture by up to 2.4x."] },
-        { idx: 1, company: "TECH SOLUTIONS", role: "Senior Full Stack Engineer", period: "2021 — 2023", summary: "Led a 5-developer squad building scalable SaaS for enterprise clients.", achievements: ["Migrated a monolith to event-driven microservices, cutting infra cost 35%.","Established Clean Architecture standards and CI/CD across teams.","Mentored 4 engineers and ran the front-end performance guild."] },
-        { idx: 2, company: "FINTECH CORP", role: "Backend Engineer", period: "2019 — 2021", summary: "Built and operated the payments core for a regulated fintech.", achievements: ["Engineered the settlement engine in Java/Spring processing R$2B+.","Sustained 99.99% uptime with idempotent, observable services.","Reduced p99 latency 60% through query and cache optimisation."] },
+        { idx: 0, company: "FREELANCE", role: "Full Stack Developer & Consultant", period: "2026 — PRESENT", summary: "Designing and shipping high-conversion products end to end for clients across fintech and SaaS.", achievements: ["Delivered 20+ websites averaging 0.9s LCP and +40% client conversion.","Owned the full stack — design, frontend, API, infra and deploy.","Introduced A/B testing on CTAs, lifting lead capture by up to 2.4x."] },
+        { idx: 1, company: "TECH SOLUTIONS", role: "Senior Full Stack Engineer", period: "2022 — 2024", summary: "Led a 5-developer squad building scalable SaaS for enterprise clients.", achievements: ["Migrated a monolith to event-driven microservices, cutting infra cost 35%.","Established Clean Architecture standards and CI/CD across teams.","Mentored 4 engineers and ran the front-end performance guild."] },
+        { idx: 2, company: "FINTECH CORP", role: "Backend Engineer", period: "2021 — 2022", summary: "Built and operated the payments core for a regulated fintech.", achievements: ["Engineered the settlement engine in Java/Spring processing R$2B+.","Sustained 99.99% uptime with idempotent, observable services.","Reduced p99 latency 60% through query and cache optimisation."] },
       ],
       testimonials: [
         { quote: "Hygor shipped our dashboard two weeks early and it just works. Rare reliability.", name: "Marina Alves", title: "CPO @ FinScale", span: 3, size: "19px", avatar: "linear-gradient(135deg,#a855f7,#22d3ee)" },
@@ -391,7 +391,10 @@ class Component extends DCLogic {
           { name: "Python", color: "#fbbf24" },
         ]},
       ],
-      socials: ["GH","IN","X"],
+      socials: [
+        { label: "IG", href: "https://www.instagram.com/gonzaga.code?igsh=eGNrZms2d2ZvaXU%3D&utm_source=qr" },
+        { label: "LI", href: "https://www.linkedin.com/in/gonzagadev?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
+      ],
       onSubmit: (e) => { e.preventDefault(); const b = e.target.querySelector('button[type=submit]'); if (b) { b.textContent = "MESSAGE SENT 🚀"; setTimeout(() => { b.textContent = "SEND MESSAGE"; }, 2600); } e.target.reset(); },
     };
   }
@@ -494,7 +497,57 @@ class Component extends DCLogic {
       });
     });
 
-    // flowing rainbow light-trail cursor
+    // ── i18n / language switcher ──────────────────────────────────────────
+    const TRANSLATIONS = {
+      pt: {
+        "AVAILABLE FOR WORK · 2026": "DISPONÍVEL PARA TRABALHO · 2026",
+        "FULL STACK DEVELOPER": "DESENVOLVEDOR FULL STACK",
+        "Designing &amp; crafting": "Projetando &amp; construindo",
+        "I build scalable, secure products from the first line of code to production — fintech architecture, high-conversion interfaces, and clean, performant systems.": "Construo produtos escaláveis e seguros do primeiro commit até a produção — arquitetura fintech, interfaces de alta conversão e sistemas limpos e performáticos.",
+        "View projects": "Ver projetos",
+        "Let's talk": "Vamos conversar",
+        "// END-TO-END SOLUTIONS": "// SOLUÇÕES COMPLETAS",
+        "Fintech-grade architecture, shipped to production.": "Arquitetura de nível fintech, entregue em produção.",
+        "Complete, scalable and secure systems — from the first commit to deploy. Event-driven microservices, real-time data, and interfaces that convert.": "Sistemas completos, escaláveis e seguros — do primeiro commit ao deploy. Microsserviços orientados a eventos, dados em tempo real e interfaces que convertem.",
+        "GLOBAL NETWORKS · REAL-TIME": "REDES GLOBAIS · TEMPO REAL",
+        "// CONTINUAL INNOVATION": "// INOVAÇÃO CONTÍNUA",
+        "UI/UX exploration.": "Exploração de UI/UX.",
+        "// RECENT PROJECTS": "// PROJETOS RECENTES",
+        "Selected work.": "Trabalhos selecionados.",
+        "Real-time analytics platform processing 2M+ daily transactions with sub-second LCP and an offline-first cache layer.": "Plataforma de analytics em tempo real processando mais de 2M de transações diárias com LCP abaixo de 1 segundo e cache offline-first.",
+        "Headless commerce with Stripe checkout — +38% conversion after a full Core Web Vitals overhaul.": "Commerce headless com checkout Stripe — +38% de conversão após otimização completa dos Core Web Vitals.",
+        "Event-driven microservices handling settlements at 99.99% uptime with idempotent, auditable ledgers.": "Microsserviços orientados a eventos processando liquidações com 99,99% de uptime e registros idempotentes e auditáveis.",
+        "Live WebSocket pricing for 5k+ assets in an installable offline-first PWA.": "Cotações via WebSocket em tempo real para mais de 5 mil ativos em um PWA instalável e offline-first.",
+        "Live demo": "Demo ao vivo",
+        "PROJECTS": "PROJETOS",
+        "EXPERIENCE": "EXPERIÊNCIA",
+        "TESTIMONIALS": "DEPOIMENTOS",
+        "CONTACT": "CONTATO",
+      },
+    };
+
+    const langBtns = root.querySelectorAll('[data-lang]');
+    let currentLang = 'en';
+
+    const applyLang = (lang) => {
+      currentLang = lang;
+      const map = lang === 'pt' ? TRANSLATIONS.pt : null;
+      root.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        el.innerHTML = (map && map[key]) ? map[key] : key;
+      });
+      langBtns.forEach((btn) => {
+        const on = btn.getAttribute('data-lang') === lang;
+        btn.style.background = on ? 'rgba(168,85,247,0.25)' : 'transparent';
+        btn.style.color = on ? '#fff' : 'rgba(244,244,246,0.6)';
+        btn.style.boxShadow = on ? '0 0 14px -4px rgba(168,85,247,0.8)' : 'none';
+      });
+    };
+
+    langBtns.forEach((btn) => btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang'))));
+    applyLang('en'); // default EN — click PT to translate
+
+    // ── flowing rainbow light-trail cursor ───────────────────────────────
     const canvas = document.getElementById('hg-trail');
     if (canvas && window.matchMedia && window.matchMedia('(pointer:fine)').matches) {
       const ctx = canvas.getContext('2d');
