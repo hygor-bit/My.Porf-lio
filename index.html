@@ -356,9 +356,9 @@
           </div>
         </div>
         <form onsubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:16px;">
-          <input type="text" placeholder="Your name" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);" />
-          <input type="email" placeholder="Email address" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);" />
-          <textarea placeholder="Tell me about your project" rows="5" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;resize:vertical;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);"></textarea>
+          <input type="text" name="name" placeholder="Your name" data-ph-orig="Your name" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);" />
+          <input type="email" name="email" placeholder="Email address" data-ph-orig="Email address" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);" />
+          <textarea name="message" placeholder="Tell me about your project" data-ph-orig="Tell me about your project" rows="5" style="padding:15px 18px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,12,0.5);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;outline:none;resize:vertical;transition:border-color .2s;" style-focus="border-color:rgba(168,85,247,0.7);"></textarea>
           <button type="submit" style="margin-top:6px;padding:17px;border:none;cursor:pointer;border-radius:14px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;letter-spacing:0.04em;color:#fff;background:linear-gradient(110deg,#a855f7,#ec4899,#22d3ee,#a855f7);background-size:200% auto;animation:hg-shimmer 5s linear infinite;box-shadow:0 0 40px -8px rgba(168,85,247,0.9);transition:transform .2s;" style-hover="transform:translateY(-2px);">SEND MESSAGE</button>
         </form>
       </div>
@@ -443,7 +443,33 @@ class Component extends DCLogic {
         { label: "IG", href: "https://www.instagram.com/gonzaga.code?igsh=eGNrZms2d2ZvaXU%3D&utm_source=qr" },
         { label: "LI", href: "https://www.linkedin.com/in/gonzagadev?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
       ],
-      onSubmit: (e) => { e.preventDefault(); const b = e.target.querySelector('button[type=submit]'); if (b) { b.textContent = "MESSAGE SENT 🚀"; setTimeout(() => { b.textContent = "SEND MESSAGE"; }, 2600); } e.target.reset(); },
+      onSubmit: async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const btn = form.querySelector('button[type=submit]');
+        const orig = btn.textContent;
+        btn.textContent = '⏳ ENVIANDO...';
+        btn.disabled = true;
+        try {
+          const body = new FormData(form);
+          body.append('access_key', '4ce6cdbe-2907-4d03-a811-8d03dee60114');
+          body.append('subject', 'Nova mensagem do portfólio — Gonzaga Code');
+          body.append('from_name', 'Portfólio Gonzaga Code');
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body });
+          const data = await res.json();
+          if (data.success) {
+            btn.textContent = '✅ MENSAGEM ENVIADA!';
+            form.reset();
+          } else {
+            btn.textContent = '❌ ERRO — TENTE NOVAMENTE';
+          }
+        } catch {
+          btn.textContent = '❌ SEM CONEXÃO';
+        } finally {
+          btn.disabled = false;
+          setTimeout(() => { btn.textContent = orig; }, 3500);
+        }
+      },
     };
   }
 
